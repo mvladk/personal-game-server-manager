@@ -72,7 +72,7 @@ Parameters:
     Type: String
     AllowedPattern: https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)
     ConstraintDescription: 'Must be a valid URL.'
-    Default: https://raw.githubusercontent.com/aws-samples/personal-game-server-manager/main/Bash/valheim.sh
+    Default: https://raw.githubusercontent.com/mvladk/personal-game-server-manager/main/Bash/valheim.sh
   KeyName:
     Description: >-
       This is required so you can access the server.  If there is no option to
@@ -1478,18 +1478,18 @@ Resources:
       ServiceToken: !GetAtt mcCopyToS3Lambda.Arn
       targetS3Bucket: !Ref mcS3Bucket
       sourceUrls:
-        - url: https://raw.githubusercontent.com/aws-samples/personal-game-server-manager/main/FrontEnd/styles.css
+        - url: https://raw.githubusercontent.com/mvladk/personal-game-server-manager/main/FrontEnd/styles.css
           content-type: text/css
-        - url: https://raw.githubusercontent.com/aws-samples/personal-game-server-manager/main/FrontEnd/index.html
+        - url: https://raw.githubusercontent.com/mvladk/personal-game-server-manager/main/FrontEnd/index.html
           content-type: text/html
-        - url: https://raw.githubusercontent.com/aws-samples/personal-game-server-manager/main/FrontEnd/signed_in.html
+        - url: https://raw.githubusercontent.com/mvladk/personal-game-server-manager/main/FrontEnd/signed_in.html
           content-type: text/html
-        - url: https://raw.githubusercontent.com/aws-samples/personal-game-server-manager/main/FrontEnd/logout.html
+        - url: https://raw.githubusercontent.com/mvladk/personal-game-server-manager/main/FrontEnd/logout.html
           content-type: text/html
-        - url: https://raw.githubusercontent.com/aws-samples/personal-game-server-manager/main/FrontEnd/js/config.js
+        - url: https://raw.githubusercontent.com/mvladk/personal-game-server-manager/main/FrontEnd/js/config.js
           content-type: application/javascript
           folder: js
-        - url: https://raw.githubusercontent.com/aws-samples/personal-game-server-manager/main/FrontEnd/js/index.js
+        - url: https://raw.githubusercontent.com/mvladk/personal-game-server-manager/main/FrontEnd/js/index.js
           content-type: application/javascript
           folder: js
 
@@ -1499,11 +1499,11 @@ Resources:
       ServiceToken: !GetAtt mcCopyToS3Lambda.Arn
       targetS3Bucket: !Ref mcLambdaSourceFilesS3
       sourceUrls:
-        - url: https://raw.githubusercontent.com/aws-samples/personal-game-server-manager/main/Lambda/mcUpdateDNS-v1_0.py
+        - url: https://raw.githubusercontent.com/mvladk/personal-game-server-manager/main/Lambda/mcUpdateDNS-v1_0.py
           content-type: application/zip
           zip: True
           filename: lambda_function.py
-        - url: https://raw.githubusercontent.com/aws-samples/personal-game-server-manager/main/Lambda/gaming_server_start_stop-v1_0.py    
+        - url: https://raw.githubusercontent.com/mvladk/personal-game-server-manager/main/Lambda/gaming_server_start_stop-v1_0.py    
           content-type: application/zip
           zip: True
           filename: lambda_function.py
